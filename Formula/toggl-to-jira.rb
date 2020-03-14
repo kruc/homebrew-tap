@@ -2,16 +2,16 @@
 class TogglToJira < Formula
   desc "Software to migrate time entries from toggl to jira."
   homepage "https://example.com/"
-  version "0.7.0-alpha.2"
+  version "0.7.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.mycompany.com/kruc/toggl-to-jira/releases/download/v0.7.0-alpha.2/toggl-to-jira_0.7.0-alpha.2_Darwin_x86_64.tar.gz"
-    sha256 "8d9032c46ac8fc34c8b27e46e652132a409bf8ab01597315274208dfc6f761ca"
+    url "https://github.com/kruc/toggl-to-jira/releases/download/v0.7.0/toggl-to-jira_0.7.0_Darwin_x86_64.tar.gz"
+    sha256 "22a959611b7b4178af1f14252437139f5e40f1d5a6287772575002b229bccf6e"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.mycompany.com/kruc/toggl-to-jira/releases/download/v0.7.0-alpha.2/toggl-to-jira_0.7.0-alpha.2_Linux_x86_64.tar.gz"
-      sha256 "6c11e90b33e41ca5507e2114a2fdf1243c6c3f27676c383a119bf9ba3087bc96"
+      url "https://github.com/kruc/toggl-to-jira/releases/download/v0.7.0/toggl-to-jira_0.7.0_Linux_x86_64.tar.gz"
+      sha256 "010bdca147c4e44826337087572eeb6fea8e68d7c5f6c259703baa760b8da7d3"
     end
   end
 
