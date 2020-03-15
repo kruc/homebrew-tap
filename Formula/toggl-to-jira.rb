@@ -7,11 +7,11 @@ class TogglToJira < Formula
 
   if OS.mac?
     url "https://github.com/kruc/toggl-to-jira/releases/download/v0.7.1/toggl-to-jira_0.7.1_Darwin_x86_64.tar.gz"
-    sha256 "86cae2c51fa72ecf1f1f76265c298547458a6106d96207ae70b1adbf578dab5c"
+    sha256 "0f8fd827f020cc3f6422a0527cae2882658e3eec3018af99899503538650c4ff"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/kruc/toggl-to-jira/releases/download/v0.7.1/toggl-to-jira_0.7.1_Linux_x86_64.tar.gz"
-      sha256 "2203966354c254210e39965df1b508650de0b952d8a932c230564896dfd86778"
+      sha256 "c048e5e97161938cc36bfbde82184f6ca2e12feea44bac5c40dc317dde6ddc7d"
     end
   end
 
@@ -20,7 +20,7 @@ class TogglToJira < Formula
   end
 
   def caveats; <<~EOS
-    How to use this binary
+    Run and read
   EOS
   end
 end
