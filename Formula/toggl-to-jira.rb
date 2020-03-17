@@ -2,16 +2,16 @@
 class TogglToJira < Formula
   desc "Software to migrate time entries from toggl to jira."
   homepage "https://example.com/"
-  version "0.7.1"
+  version "0.8.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/kruc/toggl-to-jira/releases/download/v0.7.1/toggl-to-jira_0.7.1_Darwin_x86_64.tar.gz"
-    sha256 "0f8fd827f020cc3f6422a0527cae2882658e3eec3018af99899503538650c4ff"
+    url "https://github.com/kruc/toggl-to-jira/releases/download/v0.8.0/toggl-to-jira_0.8.0_Darwin_x86_64.tar.gz"
+    sha256 "a8a4e6c4f5d4422e5fed871c8ad80136b7d04d21c4c23da91b05c32245c444f3"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/kruc/toggl-to-jira/releases/download/v0.7.1/toggl-to-jira_0.7.1_Linux_x86_64.tar.gz"
-      sha256 "c048e5e97161938cc36bfbde82184f6ca2e12feea44bac5c40dc317dde6ddc7d"
+      url "https://github.com/kruc/toggl-to-jira/releases/download/v0.8.0/toggl-to-jira_0.8.0_Linux_x86_64.tar.gz"
+      sha256 "1912ba96e5d6519094ea3faddfa01a9825eb3f63aa403045fc8b1c50c0ba7b89"
     end
   end
 
