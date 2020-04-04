@@ -2,16 +2,16 @@
 class Envsub < Formula
   desc "Parses templates using go templates"
   homepage "https://example.com/"
-  version "0.0.3"
+  version "0.0.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/kruc/envsub/releases/download/v0.0.3/envsub_darwin.tar.gz"
-    sha256 "4c6df1293a3f37eedc82d44c97ff5299d32f21f532f72901b12188bb2a913032"
+    url "https://github.com/kruc/envsub/releases/download/v0.0.4/envsub_darwin.tar.gz"
+    sha256 "bd8174517980c91110531ddd51e6620af4f2feaf2ed1bf02601596ff577627d0"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/kruc/envsub/releases/download/v0.0.3/envsub_linux.tar.gz"
-      sha256 "9c93aed60ab982f0a593d600126b44a9762ffbde32903b349bc007211fd4a3bb"
+      url "https://github.com/kruc/envsub/releases/download/v0.0.4/envsub_linux.tar.gz"
+      sha256 "328d67ea1b1659971de6d5ed8a7ceda6b63d748c08e6d7fa18ee73ddf4473d1a"
     end
   end
 
