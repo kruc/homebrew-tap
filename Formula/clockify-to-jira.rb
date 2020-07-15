@@ -2,16 +2,16 @@
 class ClockifyToJira < Formula
   desc "Software to migrate time entries from clockify to jira."
   homepage "https://example.com/"
-  version "0.3.0"
+  version "0.4.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/kruc/clockify-to-jira/releases/download/v0.3.0/clockify-to-jira_0.3.0_Darwin_x86_64.tar.gz"
-    sha256 "25d5155c06c2f142cf68fadceeef6b82aaec91c3f745c4ca03b0ba384aa8d607"
+    url "https://github.com/kruc/clockify-to-jira/releases/download/v0.4.0/clockify-to-jira_0.4.0_Darwin_x86_64.tar.gz"
+    sha256 "f1d1d19221c28ed77fe47e246a1b67cce4fc62565392b53e742a653e5e45b723"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/kruc/clockify-to-jira/releases/download/v0.3.0/clockify-to-jira_0.3.0_Linux_x86_64.tar.gz"
-      sha256 "0593dea6a6b27cdbbaaad47c52b4410e4d23cef00f98daec43d2a90453dde982"
+      url "https://github.com/kruc/clockify-to-jira/releases/download/v0.4.0/clockify-to-jira_0.4.0_Linux_x86_64.tar.gz"
+      sha256 "95a77b8296812bccd8329ac914e430a03ef6882bbe92c1f118f0a21fe184968b"
     end
   end
 
