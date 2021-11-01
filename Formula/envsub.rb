@@ -3,7 +3,6 @@ class Envsub < Formula
   desc "Parses templates using go templates"
   homepage "https://example.com/"
   version "0.0.4"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/kruc/envsub/releases/download/v0.0.4/envsub_darwin.tar.gz"
