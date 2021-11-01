@@ -3,7 +3,6 @@ class TogglToJira < Formula
   desc "Software to migrate time entries from toggl to jira."
   homepage "https://example.com/"
   version "0.8.1"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/kruc/toggl-to-jira/releases/download/v0.8.1/toggl-to-jira_0.8.1_Darwin_x86_64.tar.gz"
