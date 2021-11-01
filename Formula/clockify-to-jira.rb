@@ -6,7 +6,6 @@ class ClockifyToJira < Formula
   desc "Software to migrate time entries from clockify to jira."
   homepage "https://example.com/"
   version "0.8.1"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
