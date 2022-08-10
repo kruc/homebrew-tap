@@ -5,24 +5,34 @@
 class ClockifyToJira < Formula
   desc "Software to migrate time entries from clockify to jira."
   homepage "https://example.com/"
-  version "0.8.1"
+  version "0.9.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kruc/clockify-to-jira/releases/download/v0.8.1/clockify-to-jira_0.8.1_Darwin_x86_64.tar.gz"
-      sha256 "773852042f5d98abab94979f77ffba2cb6cdbb8bfafb2562038198bbe763d71d"
+    url "https://github.com/kruc/clockify-to-jira/releases/download/v0.9.0/clockify-to-jira_0.9.0_Darwin_all.tar.gz"
+    sha256 "4d403f63c75a11f1b8374a7511323b7402a761b1f0a93bc83c96f400112bd244"
+
+    def install
+      bin.install "clockify-to-jira"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kruc/clockify-to-jira/releases/download/v0.8.1/clockify-to-jira_0.8.1_Linux_x86_64.tar.gz"
-      sha256 "ff74e1ba3f09b1ae6adabaed8c477fd1978f1fa885e08915b5fa9567b1803f10"
-    end
-  end
+      url "https://github.com/kruc/clockify-to-jira/releases/download/v0.9.0/clockify-to-jira_0.9.0_Linux_x86_64.tar.gz"
+      sha256 "d15f2cfa390f987c15ce1e4a77e5e7738d75acc8925227d50f549eeef7681253"
 
-  def install
-    bin.install "clockify-to-jira"
+      def install
+        bin.install "clockify-to-jira"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kruc/clockify-to-jira/releases/download/v0.9.0/clockify-to-jira_0.9.0_Linux_arm64.tar.gz"
+      sha256 "9788bedcb686e23960ab84cd69250fbf03227f152935aa6705482f67d28e7a46"
+
+      def install
+        bin.install "clockify-to-jira"
+      end
+    end
   end
 
   def caveats; <<~EOS
