@@ -5,11 +5,11 @@
 class ClockifyToJira < Formula
   desc "Software to migrate time entries from clockify to jira."
   homepage "https://example.com/"
-  version "0.9.0"
+  version "1.0.0-alpha2"
 
   on_macos do
-    url "https://github.com/kruc/clockify-to-jira/releases/download/v0.9.0/clockify-to-jira_0.9.0_Darwin_all.tar.gz"
-    sha256 "4d403f63c75a11f1b8374a7511323b7402a761b1f0a93bc83c96f400112bd244"
+    url "https://github.com/kruc/clockify-to-jira/releases/download/v1.0.0-alpha2/clockify-to-jira_Darwin_all.tar.gz"
+    sha256 "6444dfb03bf2bd40ad6dca752be8cedf59c8e73087e3f06bf62440323c13c766"
 
     def install
       bin.install "clockify-to-jira"
@@ -18,25 +18,30 @@ class ClockifyToJira < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kruc/clockify-to-jira/releases/download/v0.9.0/clockify-to-jira_0.9.0_Linux_x86_64.tar.gz"
-      sha256 "d15f2cfa390f987c15ce1e4a77e5e7738d75acc8925227d50f549eeef7681253"
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/kruc/clockify-to-jira/releases/download/v1.0.0-alpha2/clockify-to-jira_Linux_x86_64.tar.gz"
+        sha256 "b44ffe523db9f15c9c3b3b1b42454c9fd21acc104e48471330226aca97b72e86"
 
-      def install
-        bin.install "clockify-to-jira"
+        def install
+          bin.install "clockify-to-jira"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kruc/clockify-to-jira/releases/download/v0.9.0/clockify-to-jira_0.9.0_Linux_arm64.tar.gz"
-      sha256 "9788bedcb686e23960ab84cd69250fbf03227f152935aa6705482f67d28e7a46"
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/kruc/clockify-to-jira/releases/download/v1.0.0-alpha2/clockify-to-jira_Linux_arm64.tar.gz"
+        sha256 "50d38403e243a2706ed8f3271c73b9d54ed31ca21af2c80e75bc372327bddd6d"
 
-      def install
-        bin.install "clockify-to-jira"
+        def install
+          bin.install "clockify-to-jira"
+        end
       end
     end
   end
 
-  def caveats; <<~EOS
-    Run and read
-  EOS
+  def caveats
+    <<~EOS
+      Run and read
+    EOS
   end
 end
